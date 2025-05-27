@@ -1,4 +1,4 @@
-(* Check for missing match_id in deliveries *)
+-- Check for missing match_id in deliveries
 
 SELECT COUNT(*) AS unmatched_deliveries
 FROM match_deliveries d
