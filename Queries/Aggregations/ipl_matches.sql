@@ -26,3 +26,12 @@ SELECT
 FROM ipl_matches
 GROUP BY winner
 ORDER BY wins DESC;
+
+-- Number of matches played per season
+
+SELECT
+  season,
+  COUNT(*) AS match_count
+FROM ipl_matches
+GROUP BY season
+ORDER BY season;
