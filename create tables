@@ -1,0 +1,20 @@
+create table ipl_matches
+(
+id int,
+season int,
+city text,
+date date,
+team1 text,
+team2 text,
+toss_winner text,
+toss_decision text,
+result text,
+dl_applied	int,
+winner	text,
+win_by_runs	int,
+win_by_wickets int,
+player_of_match	text,
+venue varchar(500),
+umpire1	text,
+umpire2	text,
+umpire3 text);
