@@ -14,3 +14,11 @@ WHERE id NOT IN (
   FROM match_deliveries
   GROUP BY match_id, inning, `over`, ball, batsman, bowler
 );
+
+-- To Check Rows with Missing Essential Data (Example for deliveries)
+
+SELECT *
+FROM match_deliveries
+WHERE match_id IS NULL
+   OR batsman IS NULL OR batsman = ''
+   OR bowler IS NULL OR bowler = '';
