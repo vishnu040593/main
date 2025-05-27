@@ -7,3 +7,22 @@ SELECT
 FROM ipl_matches
 GROUP BY toss_winner, winner
 ORDER BY match_count DESC;
+
+-- Toss Decision Impact on Winning
+
+SELECT
+  toss_decision,
+  COUNT(*) AS total_matches,
+  SUM(CASE WHEN toss_winner = winner THEN 1 ELSE 0 END) AS toss_and_match_win,
+  ROUND(SUM(CASE WHEN toss_winner = winner THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2) AS win_percentage
+FROM ipl_matches
+GROUP BY toss_decision;
+
+-- Total wins by each team
+
+SELECT
+  winner AS team,
+  COUNT(*) AS wins
+FROM ipl_matches
+GROUP BY winner
+ORDER BY wins DESC;
