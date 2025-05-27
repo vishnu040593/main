@@ -1,4 +1,4 @@
-// Check for NULL or empty values in important columns in ipl_matches
+-- Check for NULL or empty values in important columns in ipl_matches
 
 SELECT
   COUNT(*) AS total_rows,
@@ -10,7 +10,7 @@ SELECT
   COUNT(CASE WHEN winner IS NULL OR winner = '' THEN 1 END) AS null_winner
 FROM ipl_matches;
 
-// Check for invalid runs or wickets in ipl_matches
+-- Check for invalid runs or wickets in ipl_matches
 
 SELECT *
 FROM ipl_matches
