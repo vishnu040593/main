@@ -21,3 +21,9 @@ CREATE TABLE match_deliveries (
     dismissal_kind VARCHAR(50),
     fielder VARCHAR(100)
 );
+
+
+-- Since there’s no primary key or unique ID column in match_deliveries table, Adding a new auto-increment id column to uniquely identify each row
+
+ALTER TABLE match_deliveries
+ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY FIRST;
