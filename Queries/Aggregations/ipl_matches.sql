@@ -6,7 +6,7 @@ SELECT
   COUNT(*) AS match_count
 FROM ipl_matches
 GROUP BY toss_winner, winner
-ORDER BY match_count DESC;
+ORDER BY match_count DESC; -- What is the purpose of Ordering here?
 
 -- Toss Decision Impact on Winning
 
@@ -25,7 +25,7 @@ SELECT
   COUNT(*) AS wins
 FROM ipl_matches
 GROUP BY winner
-ORDER BY wins DESC;
+ORDER BY wins DESC; -- Is it coorelated to the number of games played? 
 
 -- Number of matches played per season
 
@@ -34,4 +34,4 @@ SELECT
   COUNT(*) AS match_count
 FROM ipl_matches
 GROUP BY season
-ORDER BY season;
+ORDER BY season; -- By all teams together?  Is it changing based on the number of teams and time of the year?
